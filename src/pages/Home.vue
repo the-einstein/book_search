@@ -1,6 +1,6 @@
 <template>
 <div id="home">
-  <SearchBar />
+  <SearchBar :onChange="getBooks"/>
   <BookList />
 </div>
 </template>
@@ -9,6 +9,7 @@
 import SearchBar from "@/components/SearchBar";
 import BookList from "@/components/BookList";
 import getBooks from "@/api/query";
+//TODO: add some state management write less code
 
 export default {
   name: "Home",
@@ -25,8 +26,8 @@ export default {
     }
   },
   methods: {
-     getBooks: async (query) => {
-       await getBooks(query);
+     async getBooks(query) {
+       this.books = await getBooks(query);
     }
   }
 }

@@ -6,7 +6,10 @@
 
 <script>
 export default {
-  name: "BookList"
+  name: "BookList",
+  props: [
+      ''
+  ]
 }
 </script>
 
