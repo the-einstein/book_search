@@ -1,5 +1,7 @@
 <template>
-<div></div>
+<div>
+  <h1>book list</h1>
+</div>
 </template>
 
 <script>

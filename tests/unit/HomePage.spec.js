@@ -1,15 +1,20 @@
 // Import the `mount()` method from Vue Test Utils
 import { mount } from '@vue/test-utils'
 import Home from '../../src/pages/Home'
+import SearchBar from "@/components/SearchBar";
+import BookList from "@/components/BookList";
 
-test('displays message', () => {
+test('HomePage', () => {
     // mount() returns a wrapped Vue component we can interact with
-    const wrapper = mount(Home, {
-        propsData: {
-            msg: 'Hello world'
-        }
-    })
+    const wrapper = mount(Home);
 
-    // Assert the rendered text of the component
-    expect(wrapper.text()).toContain('Hello world')
+    expect(wrapper.find('#home').exists()).toBe(true);
+
+    const searchBar = wrapper.findComponent(SearchBar);
+
+    expect(searchBar.exists()).toBe(true);
+
+    const bookList = wrapper.findComponent(BookList);
+
+    expect(bookList.exists()).toBe(true)
 })
