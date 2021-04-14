@@ -8,6 +8,7 @@
 <script>
 import SearchBar from "@/components/SearchBar";
 import BookList from "@/components/BookList";
+import getBooks from "@/api/query";
 
 export default {
   name: "Home",
@@ -17,6 +18,16 @@ export default {
   components: {
     SearchBar,
     BookList
+  },
+  data: function () {
+    return {
+      books: {}
+    }
+  },
+  methods: {
+     getBooks: async (query) => {
+       await getBooks(query);
+    }
   }
 }
 </script>
