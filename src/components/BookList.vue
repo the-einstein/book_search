@@ -1,12 +1,10 @@
 <template>
-<button>
-
-</button>
+<div></div>
 </template>
 
 <script>
 export default {
-  name: "Button"
+  name: "BookList"
 }
 </script>
 
