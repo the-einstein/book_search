@@ -5,7 +5,7 @@
 </template>
 
 <script>
-
+//TODO: change architecture of functions
 export default {
   name: "SearchBar",
   props: {

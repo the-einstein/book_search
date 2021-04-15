@@ -9,7 +9,8 @@
 import SearchBar from "@/components/SearchBar";
 import BookList from "@/components/BookList";
 import getBooks from "@/api/query";
-//TODO: add some state management write less code
+
+//TODO: add some state management to write less code
 
 export default {
   name: "Home",
@@ -23,6 +24,7 @@ export default {
     }
   },
   methods: {
+    //TODO: change function names to understandable ones
      async getBooks(query) {
        this.books = await getBooks(query);
     }

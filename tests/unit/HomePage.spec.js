@@ -7,7 +7,7 @@ import BookList from "@/components/BookList";
 test('HomePage', () => {
     // mount() returns a wrapped Vue component we can interact with
     const wrapper = mount(Home);
-
+    //TODO:make tests for functions
     expect(wrapper.find('#home').exists()).toBe(true);
 
     const searchBar = wrapper.findComponent(SearchBar);

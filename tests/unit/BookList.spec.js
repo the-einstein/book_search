@@ -2,7 +2,7 @@ import {mount} from "@vue/test-utils";
 import BookList from "@/components/BookList";
 
 test("BookList", () => {
-
+    //TODO:refactor code, get books variable to data file
     const books = {
         items: [
             {
