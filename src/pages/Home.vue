@@ -1,7 +1,7 @@
 <template>
 <div id="home">
   <SearchBar :onChange="getBooks"/>
-  <BookList />
+  <BookList :books="books" />
 </div>
 </template>
 
@@ -13,9 +13,6 @@ import getBooks from "@/api/query";
 
 export default {
   name: "Home",
-  props: {
-    msg: String
-  },
   components: {
     SearchBar,
     BookList
