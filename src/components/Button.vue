@@ -1,12 +1,15 @@
 <template>
-<button>
-
-</button>
+   <button @click="$router.push({ name: 'bookInfo', params: { book: book } })">
+      More info
+   </button>
 </template>
 
 <script>
 export default {
-  name: "Button"
+  name: "Button",
+  props: [
+      'book'
+  ]
 }
 </script>
 

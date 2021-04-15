@@ -10,7 +10,7 @@ test('Book page', () => {
                     title: 'smthng',
                     authors: [],
                     imageLinks: {
-                        smallThumbnail: 'url'
+                        thumbnail: 'url'
                     }
                 },
                 searchInfo: {

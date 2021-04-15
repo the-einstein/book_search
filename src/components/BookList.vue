@@ -11,7 +11,7 @@
         <td><img :src="book.volumeInfo.imageLinks.smallThumbnail" alt=""></td>
         <td>{{book.volumeInfo.title}}</td>
         <td>{{book.volumeInfo.authors}}</td>
-        <td><Button /></td>
+        <td><Button :book="book"/></td>
       </tr>
     </table>
   </main>

@@ -1,8 +1,8 @@
 <template>
 <div id="book">
-  <span id="title">{{book.volumeInfo.title}}</span>
-  <img id="thumbnail" :src="book.volumeInfo.imageLinks.smallThumbnail" alt="">
-  <span id="description">{{book.searchInfo.textSnippet}}</span>
+  <h1 id="title">{{book.volumeInfo.title}}</h1>
+  <img id="thumbnail" :src="book.volumeInfo.imageLinks.thumbnail" alt="">
+  <h3 id="description">{{book.searchInfo.textSnippet.toString()}}</h3>
   <span id="authors">{{book.volumeInfo.authors}}</span>
 </div>
 </template>
@@ -17,5 +17,16 @@ export default {
 </script>
 
 <style scoped>
+#book{
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
 
+  align-items: center;
+}
+img{
+  height: 65vh;
+  width: 55vh;
+}
 </style>
