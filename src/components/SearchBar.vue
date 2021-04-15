@@ -1,6 +1,6 @@
 <template>
 <div>
-  <input type="text" v-model="query">
+  <input type="text" autocomplete="on" placeholder="Type your search text here" v-model="query">
 </div>
 </template>
 
@@ -26,5 +26,11 @@ export default {
 </script>
 
 <style scoped>
+input{
+  margin-bottom: 2vh;
 
+  width: 80%;
+  height: 5vh;
+  text-align: center;
+}
 </style>
