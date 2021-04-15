@@ -31,4 +31,6 @@ test("BookList", () => {
 
     expect(wrapper.get('#author'))
 
+    expect(wrapper.get('#action'))
+
 })
