@@ -11,7 +11,7 @@
         <td><img v-if="book.volumeInfo.imageLinks" :src="book.volumeInfo.imageLinks.smallThumbnail" alt=""></td>
         <td>{{book.volumeInfo.title}}</td>
         <td><span v-if="book.volumeInfo.authors">{{book.volumeInfo.authors[0]}}</span></td>
-        <td><Button :book="book"/></td>
+        <td><Button :book="book" :name="routeName" :text="buttonText"/></td>
       </tr>
     </table>
   </main>
@@ -19,12 +19,17 @@
 
 <script>
 import Button from "@/components/Button";
+
 export default {
   name: "BookList",
   components: {Button},
   props: [
       'books'
-  ]
+  ],
+  data: () => ({
+    routeName: 'bookInfo',
+    buttonText: 'More info'
+  })
 }
 </script>
 
