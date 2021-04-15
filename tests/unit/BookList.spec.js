@@ -1,22 +1,8 @@
 import {mount} from "@vue/test-utils";
 import BookList from "@/components/BookList";
+import books from '../variables/books';
 
 test("BookList", () => {
-    //TODO:refactor code, get books variable to data file
-    const books = {
-        items: [
-            {
-                volumeInfo: {
-                    title: 'smthng',
-                    authors: [],
-                    imageLinks: {
-                        smallThumbnail: 'url'
-                    }
-                }
-            }
-        ]
-    }
-
     const wrapper = mount(BookList, {
         propsData: {
             books: books
